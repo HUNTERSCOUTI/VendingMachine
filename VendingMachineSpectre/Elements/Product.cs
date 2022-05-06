@@ -14,8 +14,7 @@ public class Product
 
     public int Cost { get; set; }
 
-    public virtual ICollection<Nutrition>? Nutritions { get; set; }
+    public List<Nutrition> Nutritions { get; set; } = new List<Nutrition>();
 
-    public override string ToString() => $"\nName: {Name}\nCost: {Cost}\nNutritions " + String.Join(", ", Nutritions) +"\n";
+    public override string ToString() => $"\nName: {Name}\nCost: {Cost}\nNutritions: " + String.Join(", ", Nutritions) +"\n";
 }
-
