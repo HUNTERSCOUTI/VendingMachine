@@ -57,10 +57,11 @@ public class MachineFunc
     {
         var MachineTable = new Table();
 
-        MachineTable.AddColumn("Products");
-        MachineTable.AddRow("Test");
+        MachineTable.AddColumn(" \n\n\n\n\n\n");
+        MachineTable.AddColumn(new TableColumn(" "));
+        MachineTable.AddRow(" \n\n\n\n\n\n");
 
-        MachineTable.Width(50);
+        MachineTable.Width(40);
 
         AnsiConsole.Write(MachineTable);
     }
