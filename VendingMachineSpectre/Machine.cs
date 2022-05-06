@@ -1,6 +1,9 @@
 ﻿using Spectre.Console;
+using VendingMachineSpectre;
+using System.Runtime.InteropServices;
 
-public class Machine
+
+public class MachineProgram
 {
     #region Fullscreen Variables
     [DllImport("kernel32.dll", ExactSpelling = true)]
@@ -14,26 +17,53 @@ public class Machine
     private const int RESTORE = 9;
     #endregion
 
-    public static void TableBuild(Table table)
-    {
-        table.AddColumn("Products");
-        table.AddRow("Test");
-    }
     public static void Main(string[] args)
+    {
+        Console.Title = "Match 3";
+        Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
+        ShowWindow(ThisConsole, MAXIMIZE);
+
+        var machine = new MachineFunc();
+        machine.Run();
+    }
+}
+
+public class MachineFunc
+{
+    MachineDbContext data = new MachineDbContext();
+    public bool UserAction = false;
+    public List<Product>? Products
+    {
+        get
+        {
+            return data.Products.Local.ToList<Product>();
+        }
+    }
+
+    public void Run()
+    {
+        do
+        {
+            Print();
+        } while (UserAction);
+    }
+
+    public void Print()
+    {
+        TableDraw();
+    }
+
+    public void TableDraw()
     {
         var MachineTable = new Table();
 
-        TableBuild(MachineTable);
+        MachineTable.AddColumn("Products");
+        MachineTable.AddRow("Test");
+
+        MachineTable.Width(50);
+
         AnsiConsole.Write(MachineTable);
-        
-        
-
-        Console.ReadKey();
     }
 
-    public static void TableBuild(Table table)
-    {
-        table.AddColumn("Products");
-        table.AddRow("Test");
-    }
+
 }
