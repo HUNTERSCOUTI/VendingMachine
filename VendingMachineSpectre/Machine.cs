@@ -60,6 +60,7 @@ public class MachineFunc
         MachineTable.AddColumn(" \n\n\n\n\n\n");
         MachineTable.AddColumn(new TableColumn(" "));
         MachineTable.AddColumn(new TableColumn(" "));
+
         MachineTable.AddRow("TEST");
         
 
