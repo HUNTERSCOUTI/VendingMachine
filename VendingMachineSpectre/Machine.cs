@@ -64,6 +64,7 @@ public class MachineFunc
         for (int i = 0; i < 10; i++)
         {
             MachineTable.AddRow("TEST");
+
         }
 
 
