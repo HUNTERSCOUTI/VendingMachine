@@ -60,12 +60,8 @@ public class MachineFunc
         MachineTable.AddColumn(" \n\n\n\n\n\n");
         MachineTable.AddColumn(new TableColumn(" "));
         MachineTable.AddColumn(new TableColumn(" "));
-
-        for (int i = 0; i < 10; i++)
-        {
-            MachineTable.AddRow("TEST");
-
-        }
+        MachineTable.AddRow("TEST");
+        
 
 
         MachineTable.Width(40);
