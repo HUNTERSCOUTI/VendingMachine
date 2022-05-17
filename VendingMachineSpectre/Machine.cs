@@ -1,10 +1,11 @@
-﻿using Spectre.Console;
-using VendingMachineSpectre;
+﻿using VendingMachineSpectre;
+using System.Text;
 using System.Runtime.InteropServices;
 
 
 public class MachineProgram
 {
+    
     #region Fullscreen Variables
     [DllImport("kernel32.dll", ExactSpelling = true)]
     private static extern IntPtr GetConsoleWindow();
@@ -16,22 +17,36 @@ public class MachineProgram
     private const int MINIMIZE = 6;
     private const int RESTORE = 9;
     #endregion
+    
+    public static bool UserAction = false;
+
+    public static void Run()
+    {
+        do
+        {
+            MachineFunc.Print();
+            
+        } while (UserAction);
+    }
 
     public static void Main(string[] args)
     {
-        Console.Title = "Match 3";
+        Console.OutputEncoding = System.Text.Encoding.GetEncoding(20127);
+        Console.Title = "Vending Machine";
+        
         Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
         ShowWindow(ThisConsole, MAXIMIZE);
+        
 
-        var machine = new MachineFunc();
-        machine.Run();
+        Run();
+
+        Console.ReadKey();
     }
 }
 
 public class MachineFunc
 {
     MachineDbContext data = new MachineDbContext();
-    public bool UserAction = false;
     public List<Product>? Products
     {
         get
@@ -40,35 +55,15 @@ public class MachineFunc
         }
     }
 
-    public void Run()
+    public static void Print()
     {
-        do
-        {
-            Print();
-        } while (UserAction);
+        TableDraw draw = new TableDraw();
+        draw.DrawTop();
+        draw.DrawMidSpacer();
+        draw.DrawMiddle();
+        draw.DrawMidSpacer();
+        draw.DrawMiddle();
+        draw.DrawMidSpacer();
+        draw.DrawBottom();
     }
-
-    public void Print()
-    {
-        TableDraw();
-    }
-
-    public void TableDraw()
-    {
-        var MachineTable = new Table();
-
-        MachineTable.AddColumn(" \n\n\n\n\n\n");
-        MachineTable.AddColumn(new TableColumn(" "));
-        MachineTable.AddColumn(new TableColumn(" "));
-
-        MachineTable.AddRow("TEST");
-        
-
-
-        MachineTable.Width(40);
-
-        AnsiConsole.Write(MachineTable);
-    }
-
-
 }
