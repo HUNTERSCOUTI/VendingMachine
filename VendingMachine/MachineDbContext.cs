@@ -13,5 +13,7 @@ internal class MachineDbContext : DbContext
     {
         optionsBuilder.UseSqlite("Data Source = vendmach.db");
     }
+
+    public DbSet<>
 }
 
