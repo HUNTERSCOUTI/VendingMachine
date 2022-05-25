@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VendingMachineSpectre", "VendingMachineSpectre\VendingMachineSpectre.csproj", "{E8E95162-9F54-4999-A81F-D65FAB2E09DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VendingMachine", "VendingMachineSpectre\VendingMachine.csproj", "{E8E95162-9F54-4999-A81F-D65FAB2E09DD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VendingWallet", "VendingWallet\VendingWallet.csproj", "{C0A3706E-6E3A-4510-A976-F590F4C3DBB3}"
 EndProject
