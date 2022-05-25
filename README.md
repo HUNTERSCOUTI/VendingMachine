@@ -1,2 +1,2 @@
 # VendingMachine
-A Vending Machine displayed with Spectre.Console Libary and databased with SQLite.
+A Vending Machine displayed with WPF and databased with SQLite.
