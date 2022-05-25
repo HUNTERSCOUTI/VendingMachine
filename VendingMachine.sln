@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VendingWallet", "VendingWallet\VendingWallet.csproj", "{C0A3706E-6E3A-4510-A976-F590F4C3DBB3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VendingMachine", "VendingMachine\VendingMachine.csproj", "{0F1DE125-8230-4FC6-96CA-4080823417D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachine", "VendingMachine\VendingMachine.csproj", "{1F6E916D-81D5-45EA-9412-9C35B0DA1B00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{C0A3706E-6E3A-4510-A976-F590F4C3DBB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0A3706E-6E3A-4510-A976-F590F4C3DBB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0A3706E-6E3A-4510-A976-F590F4C3DBB3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F1DE125-8230-4FC6-96CA-4080823417D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F1DE125-8230-4FC6-96CA-4080823417D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F1DE125-8230-4FC6-96CA-4080823417D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F1DE125-8230-4FC6-96CA-4080823417D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F6E916D-81D5-45EA-9412-9C35B0DA1B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F6E916D-81D5-45EA-9412-9C35B0DA1B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F6E916D-81D5-45EA-9412-9C35B0DA1B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F6E916D-81D5-45EA-9412-9C35B0DA1B00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

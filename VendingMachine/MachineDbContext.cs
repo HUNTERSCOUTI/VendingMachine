@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace VendingMachineSpectre;
+namespace VendingMachine;
 
 internal class MachineDbContext : DbContext
 {
@@ -13,9 +13,5 @@ internal class MachineDbContext : DbContext
     {
         optionsBuilder.UseSqlite("Data Source = vendmach.db");
     }
-
-    public DbSet<Product>? Products { get; set; }
-    public DbSet<Nutrition>? Nutritions { get; set; }
-    public DbSet<User>? Users { get; set; }
 }
 
